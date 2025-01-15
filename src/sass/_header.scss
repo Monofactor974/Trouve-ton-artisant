@@ -1,0 +1,136 @@
+.header {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+
+  @media (max-width: 1212px) {
+    flex-direction: column;
+    padding: 1rem 5%;
+  }
+}
+
+.header-logo img {
+  max-width: 150px;
+
+  @media (max-width: 1212px) {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 834px) {
+    display: none; /* Hide navigation for small screens */
+  }
+}
+
+.header-nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  flex-wrap: wrap;
+
+  @media (max-width: 1212px) {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 834px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header-menu .btn-primary {
+  background-color: #0074c7;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header-menu .btn-primary:hover {
+  background-color: #005fab;
+}
+
+.header-search {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #f1f8fc;
+  padding: 0.5rem;
+  border-radius: 50px;
+
+  @media (max-width: 1212px) {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+.header-search input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: #f1f8fc;
+}
+
+.header-search button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #0074c7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-search button:hover {
+  background-color: #005fab;
+}
+
+.burger-icon {
+  display: none; /* Hide burger icon by default */
+  font-size: 2rem;
+  cursor: pointer;
+
+  @media (max-width: 834px) {
+    display: block; /* Show burger icon on small screens */
+  }
+}
+
+.close-button {
+  display: none; /* Hide close button by default */
+  font-size: 1.5rem; /* Adjust size for readability */
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0074c7; /* Match the primary color */
+  margin-top: 1rem;
+
+  @media (max-width: 834px) {
+    display: block; /* Show close button on small screens */
+  }
+}

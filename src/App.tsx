@@ -1,35 +1,81 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
+import CategoryPage from "./components/CategoryPage";
+import ArtisanDetail from "./components/ArtisanDetail";
+import SearchPage from "./components/SearchPage";
+import NotFound from "./components/NotFound";
+import data from "./assets/datas.json";
+import { Artisan } from "./components/types";
+import "./styles/styles.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [filteredArtisans, setFilteredArtisans] = useState<Artisan[]>([]);
+  const navigate = useNavigate();
+
+  const handleSearch = (term: string) => {
+    if (term.trim()) {
+      const lowercasedTerm = term.toLowerCase();
+      console.log("Received search term:", term);
+      const filteredData = data.filter(
+        (artisan: Artisan) =>
+          artisan.name.toLowerCase().includes(lowercasedTerm) ||
+          artisan.specialty.toLowerCase().includes(lowercasedTerm) ||
+          artisan.location.toLowerCase().includes(lowercasedTerm)
+      );
+      console.log("Filtered Artisans:", filteredData);
+      setFilteredArtisans(filteredData);
+      navigate("/search");
+    }
+  };
+
+  const getArtisansByCategory = (category: string): Artisan[] => {
+    return data.filter(
+      (artisan) => artisan.category.toLowerCase() === category.toLowerCase()
+    );
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header onSearch={handleSearch} />
+      <Routes>
+        <Route path="/" element={<HomePage artisans={data} />} />
+        <Route
+          path="/category/Batiment"
+          element={
+            <CategoryPage artisans={getArtisansByCategory("Batiment")} />
+          }
+        />
+        <Route
+          path="/category/Services"
+          element={
+            <CategoryPage artisans={getArtisansByCategory("Services")} />
+          }
+        />
+        <Route
+          path="/category/Fabrication"
+          element={
+            <CategoryPage artisans={getArtisansByCategory("Fabrication")} />
+          }
+        />
+        <Route
+          path="/category/Alimentation"
+          element={
+            <CategoryPage artisans={getArtisansByCategory("Alimentation")} />
+          }
+        />
+        <Route path="/artisan/:id" element={<ArtisanDetail />} />
+        <Route
+          path="/search"
+          element={<SearchPage filteredArtisans={filteredArtisans} />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

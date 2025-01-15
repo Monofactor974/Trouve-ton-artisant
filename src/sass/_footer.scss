@@ -1,0 +1,54 @@
+.footer {
+  padding: 3rem; // Ajoutez plus de rembourrage pour augmenter la hauteur
+  background-color: #f8f9fa;
+  text-align: center;
+
+  // Assurez-vous que le footer prend toute la largeur disponible
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-image {
+  width: 100%;
+
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  width: 50px; // Ajustez la taille selon vos besoins
+  height: 50px; // Ajustez la taille selon vos besoins
+}
+
+.footer h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.footer address,
+.footer ul {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer .list-unstyled {
+  padding: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

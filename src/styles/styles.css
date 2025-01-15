@@ -1,0 +1,531 @@
+@charset "UTF-8";
+.footer {
+  padding: 3rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-image {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.footer h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.footer address,
+.footer ul {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer .list-unstyled {
+  padding: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.categorypage {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+.categorypage .category-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.categorypage h2 {
+  color: #0074c7;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.categorypage .artisan-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+@media (max-width: 992px) {
+  .categorypage .artisan-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+.categorypage .category-card {
+  max-width: none;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.categorypage .category-card:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .categorypage .category-card {
+    height: auto;
+  }
+}
+.categorypage .category-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0074c7;
+}
+.categorypage .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.categorypage .stars {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.categorypage p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* 
+_artisandetail.scss 
+*/
+.artisan-detail .container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+.artisan-detail h2 {
+  font-size: 2rem;
+  color: #333;
+}
+.artisan-detail p {
+  font-size: 1rem;
+  color: #666;
+}
+.artisan-detail .card {
+  background-color: #f5f5f5;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.artisan-detail .card-body {
+  padding: 20px;
+}
+.artisan-detail .form-label {
+  font-weight: bold;
+  color: #333;
+}
+.artisan-detail .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+.artisan-detail .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.artisan-detail .mt-4 {
+  margin-top: 1.5rem;
+}
+.artisan-detail .stars {
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+.homepage {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+.homepage .banner {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.homepage .home-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+.homepage h1 {
+  color: #333;
+  text-align: center;
+}
+.homepage h2 {
+  color: #0074c7;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.homepage .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.homepage .steps .step {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  position: relative;
+  padding-left: 4rem;
+  display: flex;
+  align-items: center;
+}
+.homepage .steps .step .step-number {
+  color: #fff;
+  background-color: #0074c7;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+.homepage .steps .step p {
+  margin: 0;
+}
+.homepage .artisan-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Équilibrer les cartes au centre */
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .homepage .artisan-cards {
+    justify-content: center; /* Réajustement pour écrans moyens */
+  }
+}
+@media (max-width: 576px) {
+  .homepage .artisan-cards {
+    flex-direction: column; /* Réajustement pour petits écrans */
+  }
+}
+.homepage .artisan-card-wrapper {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .homepage .artisan-card-wrapper {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+@media (max-width: 576px) {
+  .homepage .artisan-card-wrapper {
+    flex: 1 1 100%;
+  }
+}
+.homepage .artisan-card {
+  max-width: none;
+  width: 100%;
+  height: 350px !important;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.homepage .artisan-card:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 576px) {
+  .homepage .artisan-card {
+    height: auto; /* Ajustement pour petits écrans */
+  }
+}
+.homepage .artisan-card .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0074c7;
+}
+.homepage .card-body {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .stars {
+  color: #ffd700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.homepage p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.header {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+}
+@media (max-width: 1212px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem 5%;
+  }
+}
+
+.header-logo img {
+  max-width: 150px;
+}
+@media (max-width: 1212px) {
+  .header-logo img {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 834px) {
+  .header-nav {
+    display: none; /* Hide navigation for small screens */
+  }
+}
+
+.header-nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+@media (max-width: 1212px) {
+  .header-menu {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 834px) {
+  .header-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.header-menu .btn-primary {
+  background-color: #0074c7;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header-menu .btn-primary:hover {
+  background-color: #005fab;
+}
+
+.header-search {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #f1f8fc;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+@media (max-width: 1212px) {
+  .header-search {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+.header-search input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: #f1f8fc;
+}
+
+.header-search button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #0074c7;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-search button:hover {
+  background-color: #005fab;
+}
+
+.burger-icon {
+  display: none; /* Hide burger icon by default */
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 834px) {
+  .burger-icon {
+    display: block; /* Show burger icon on small screens */
+  }
+}
+
+.close-button {
+  display: none; /* Hide close button by default */
+  font-size: 1.5rem; /* Adjust size for readability */
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #0074c7; /* Match the primary color */
+  margin-top: 1rem;
+}
+@media (max-width: 834px) {
+  .close-button {
+    display: block; /* Show close button on small screens */
+  }
+}
+
+/* _searchpage.scss */
+.searchpage {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+.searchpage h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.searchpage .search-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2 rem;
+  margin-top: 2rem;
+}
+.searchpage .search-card {
+  max-width: none;
+  width: 250px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flexible;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.searchpage .search-card:hover {
+  transform: scale(1.05);
+}
+.searchpage .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0074c7;
+}
+.searchpage .card-body {
+  flex: 1;
+  display: flexible;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.searchpage .stars {
+  color: #ffd700;
+  font-size: 15 rem;
+  margin-bottom: 0.5rem;
+}
+.searchpage p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}/*# sourceMappingURL=styles.css.map */
