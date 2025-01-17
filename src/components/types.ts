@@ -1,5 +1,3 @@
-// src/types.ts
-
 export interface Artisan {
   id: string;
   name: string;
